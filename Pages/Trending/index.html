@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orange Checker</title>
+    <style>
+      body {
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+        font-family: Arial, sans-serif; /* Font styling */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center elements */
+        justify-content: center; /* Center elements */
+        height: 100vh; /* Full viewport height */
+        margin: 0; /* Remove default margin */
+      }
+
+      h1 {
+        margin-bottom: 20px; /* Space below the heading */
+      }
+
+      .file-upload {
+        position: relative; /* Position for absolute elements */
+        margin-bottom: 20px; /* Space below the file upload */
+      }
+
+      input[type="file"] {
+        display: none; /* Hide default file input */
+      }
+
+      .custom-file-upload {
+        padding: 10px 20px; /* Padding for custom button */
+        background-color: #444; /* Darker background */
+        color: #fff; /* White text */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 16px; /* Increase font size */
+        transition: background-color 0.3s; /* Transition effect */
+      }
+
+      .custom-file-upload:hover {
+        background-color: #555; /* Darker background on hover */
+      }
+
+      #result {
+        margin-top: 20px; /* Space above result text */
+        font-size: 18px; /* Larger text for result */
+        text-align: center; /* Center text */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload an Image to Check if it's an Orange</h1>
+    <div class="file-upload">
+      <label class="custom-file-upload">
+        <input type="file" id="imageInput" accept="image/*" />
+        Choose File
+      </label>
+    </div>
+    <p id="result"></p>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

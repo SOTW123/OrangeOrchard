@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orange Orchard Newsletter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: whitesmoke;
+        font-family: "Poppins", sans-serif;
+        padding: 20px;
+      }
+      .newsletter {
+        margin: 20px auto;
+        max-width: 800px;
+        border: 1px solid #ff6f00; /* Orange border */
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .article {
+        border-bottom: 1px solid #444; /* Divider line between articles */
+      }
+      .article:last-child {
+        border-bottom: none; /* Remove divider from last article */
+      }
+      .title {
+        padding: 15px;
+        cursor: pointer;
+        background-color: #222; /* Darker background for titles */
+        transition: background-color 0.3s;
+      }
+      .title:hover {
+        background-color: #ff6f00; /* Highlight color on hover */
+      }
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        padding: 0 15px;
+        background-color: #333; /* Slightly lighter background for content */
+      }
+      .content.show {
+        max-height: 200px; /* Adjust based on content length */
+        padding: 15px; /* Add padding when showing */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="newsletter">
+      <h1>Orange Orchard Newsletter</h1>
+      <div id="articles-container"></div>
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
